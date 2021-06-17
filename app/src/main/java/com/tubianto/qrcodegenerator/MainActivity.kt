@@ -106,17 +106,6 @@ class MainActivity : AppCompatActivity() {
         catch (e: WriterException) {}
     }
 
-    private fun share(source: Bitmap, title: String){
-        val bitmapPath = MediaStore.Images.Media.insertImage(contentResolver, source, title, null)
-        Log.e("BITMAP PATH", bitmapPath)
-        val bitmapUri: Uri = Uri.parse(bitmapPath)
-
-        val intent = Intent(Intent.ACTION_SEND)
-        intent.type = "image/png"
-        intent.putExtra(Intent.EXTRA_STREAM, bitmapUri)
-        startActivity(Intent.createChooser(intent, "Bagikan QR Code melalui"))
-    }
-
     private fun AlertDialog.withCenteredButtons() {
         val positive = getButton(AlertDialog.BUTTON_POSITIVE)
         val negative = getButton(AlertDialog.BUTTON_NEGATIVE)
@@ -138,5 +127,16 @@ class MainActivity : AppCompatActivity() {
 
         positive.layoutParams = layoutParams
         negative.layoutParams = layoutParams
+    }
+
+    private fun share(source: Bitmap, title: String){
+        val bitmapPath = MediaStore.Images.Media.insertImage(contentResolver, source, title, null)
+        Log.e("BITMAP PATH", bitmapPath)
+        val bitmapUri: Uri = Uri.parse(bitmapPath)
+
+        val intent = Intent(Intent.ACTION_SEND)
+        intent.type = "image/png"
+        intent.putExtra(Intent.EXTRA_STREAM, bitmapUri)
+        startActivity(Intent.createChooser(intent, "Bagikan QR Code melalui"))
     }
 }
