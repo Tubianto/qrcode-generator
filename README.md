@@ -3,7 +3,7 @@ Membuat QR Code menggunakan library QRGen
 <br/>
 <br/>
 Tutorial step by step:
-> <a href="https://tubianto.com/cara-membuat-session-untuk-login-dan-logout-menggunakan-sharedpreferences/">https://tubianto.com/cara-membuat-session-untuk-login-dan-logout-menggunakan-sharedpreferences</a>
+> <a href="https://tubianto.com/membuat-qr-code-menggunakan-library-qrgen/">https://tubianto.com/membuat-qr-code-menggunakan-library-qrgen/</a>
 <br/>
 <center><b>Preview</b></center>
 <br/>
